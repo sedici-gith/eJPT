@@ -1,2 +1,2 @@
 # eJPT
-Exam Notes and CTF technicals notes
+Exam notes (coming soon) and CTF notes
