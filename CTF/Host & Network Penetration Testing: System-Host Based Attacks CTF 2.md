@@ -3,9 +3,13 @@
 
 We begin with an Nmap scan across all ports, which reveals that only port 80 is open
 
-```nmap -sS -O -p- -T4 target1.ine.local```
+```
+nmap -sS -O -p- -T4 target1.ine.local
+```
 
-```nmap -sS -O -p80 -sV -T4 target1.ine.local```
+```
+nmap -sS -O -p80 -sV -T4 target1.ine.local
+```
 
 A service scan reveals Apache 2.4.6 (Unix) on the target system.
 
