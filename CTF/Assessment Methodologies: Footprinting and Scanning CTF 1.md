@@ -15,9 +15,13 @@ We note the flag and proceed to identify the IP of the target site using whatweb
 
 Using whatweb on the target site, we find the first flag in the response.
 
+***
+
 ### Flag 2: The gatekeeper's instructions often reveal what should remain unseen. Don't forget to read between the lines
 
 We have found the flag during the previous analysis with the help of dirb.
+
+***
 
 ### Flag 3: Anonymous access sometimes leads to forgotten treasures. Connect and explore the directory; you might stumble upon something valuable
 
@@ -57,6 +61,8 @@ get flag.txt
 This file contains the third flag.
 
 Additionally, downloading creds.txt, provides database credentials.
+
+***
 
 ### Flag 4: A well-named database can be quite revealing. Peek at the configurations to discover the hidden treasure
 
