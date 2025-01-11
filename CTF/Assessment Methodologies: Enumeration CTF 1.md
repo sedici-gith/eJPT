@@ -57,6 +57,7 @@ smbclient -U '' //target.ine.local/pubfiles
 ```
 After several attempts, we find the pubfiles directory containing the first flag.
 
+***
 
 ### Flag 2: One of the samba users have a bad password. Their private share with the same name as their username is at risk!
 
@@ -65,6 +66,8 @@ While we are unable to see a complete list of the shares, we assume that the sha
 smbclient \\\\target.ine.local\\josh -U josh
 ```
 In this location, we find the second flag.
+
+***
 
 ### Flag 3: Follow the hint given in the previous flag to uncover this one.
 
@@ -103,17 +106,19 @@ ftp -P 5554 target.ine.local
 ```
 We log into FTP service with this username and password to recover the third flag.
 
+***
 
 ### Flag 4: This is a warning meant to deter unauthorized users from logging in.
 
 The last known service on the machine is SSH.
 After attempting to access it with the root user, the service prints a warning banner containing the final flag.
 
+***
 
 ### Alternative to discover Flag 1
 
 We have to write Python code (or a bash script) to automate the process of brute forcing using the list in Desktop subfolder.
-```
+```python
 import subprocess
 
 # Path to the file containing the list of shares
