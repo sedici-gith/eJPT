@@ -1,6 +1,5 @@
 ## Host & Network Penetration Testing: System-Host Based Attacks CTF 1
 
-
 ### Flag 1: User 'bob' might not have chosen a strong password. Try common passwords to gain access to the server where the flag is located. (target1.ine.local)
 
 We start with an Nmap scan on target1.ine.local, discovering some ports open.
@@ -30,6 +29,7 @@ gobuster dir -u http://target1.ine.local/ -w /usr/share/wordlists/dirb/common.tx
 ```
 The scan reveals a WebDAV server containing the first flag.
 
+***
 
 ### Flag 2: Valuable files are often on the C: drive. Explore it thoroughly. (target1.ine.local)
 
@@ -48,6 +48,8 @@ Typing:
 type c:\flag2.txt
 ```
 allow us to retrieve the second flag.
+
+***
 
 ### Flag 3: By attempting to guess SMB user credentials, you may uncover important information that could lead you to the next flag. (target2.ine.local)
 
@@ -82,6 +84,8 @@ We find the third flag in this folder and download it with:
 ```
 get flag3.txt
 ```
+
+***
 
 ### Flag 4: The Desktop directory might have what you're looking for. Enumerate its contents. (target2.ine.local)
 
