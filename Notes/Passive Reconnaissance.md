@@ -1,4 +1,4 @@
-## Passive Reconnaissance
+## Passive Reconnaissance & Google Dorks
 
 [eJPT - Exam Notes Index](https://github.com/sedici-gith/eJPT/tree/main)
 
@@ -89,3 +89,17 @@ It is used to “harvest” publicly available email addresses thanks to renowne
 haveibeenpwned.com
 All passwords or other leaked information can be found in this site.
 It is used to discover target e-mail address or passwords leaked on various platforms.
+
+## Google Dorks
+
+* site:ine.com
+* inurl:admin
+* site:*.ine.com - subdomain enumeration
+* intitle:admin
+* filetype:pdf,doc,zip,etc.
+* intitle:index of - directory listing
+* cache:ine.com - site cached version
+* inurl:auth_user_fil.txt
+* inurl:passwd.txt
+
+## Hacking database - exploit-db.com
