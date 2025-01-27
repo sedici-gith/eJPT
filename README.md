@@ -13,6 +13,8 @@
 * [SMB (Samba) - p445 and NetBios - p137,138,139](https://github.com/sedici-gith/eJPT/blob/main/Notes/SMB%20(Samba)%20-%20p445%20and%20NetBios%20-%20p137%2C138%2C139.md)
 * [FTP - p21](https://github.com/sedici-gith/eJPT/blob/main/Notes/FTP%20-%20p21.md)
 * [SSH -p22](https://github.com/sedici-gith/eJPT/blob/main/Notes/SSH%20-%20p22.md)
+* [SMTP - p25,465,587](https://github.com/sedici-gith/eJPT/blob/main/Notes/SMTP%20-%20p25%2C465%2C587.md)
+* [HTTP IIS & Apache - p80](https://github.com/sedici-gith/eJPT/blob/main/Notes/HTTP%20IIS%20&%20Apache%20-%20p80.md)
 
 
 ## eJPT - CTF Notes
