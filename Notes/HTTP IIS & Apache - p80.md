@@ -4,6 +4,10 @@
 
 ### Nmap scripts
 
+Nmap banner enumeration
+```
+nmap 10.10.10.1 -p 80 -sV --script banner
+```
 Directory enumeration
 ```
 nmap 10.10.10.1 -sV -p 80 --script http-enum
@@ -83,6 +87,7 @@ Using the search function there are many modules to use.
 * http_header - enumerate header
 * robots.txt - enumerate robots.txt
 * dir_scanner - brute-force directory
+* brute_dirs - brute-force directory
 * files_dir - brute-force files
 * apache_userdir_enum - users enumeration
 * http_login - brute-force credentials
@@ -106,9 +111,13 @@ wmap_run -h
 wmap_run -t - lists modules used during the scan
 wmap_run -e - executes scan
 ```
-### Exploiting a vulnerable Apache Tomcat web server
+
+## HTTP Apache - p80
 
 Apache Tomcat is usually used to host sites developed in Java e uses port TCP 8080.
+
+### Exploiting a vulnerable Apache Tomcat web server
+
 ```
 search type:exploit tomcat_jsp_upload_bypass
 set payload java/jsp_shell_bind_tcp
