@@ -17,6 +17,8 @@
 * [HTTP IIS & Apache - p80](https://github.com/sedici-gith/eJPT/blob/main/Notes/HTTP%20IIS%20&%20Apache%20-%20p80.md)
 * [MySQL - p3306](https://github.com/sedici-gith/eJPT/blob/main/Notes/MySQL%20-%20p3306.md)
 * [MSSQL - p1433](https://github.com/sedici-gith/eJPT/blob/main/Notes/MSSQL%20-%20p1433.md)
+* [RPD - p3389](https://github.com/sedici-gith/eJPT/blob/main/Notes/RPD%20-%20p3389.md)
+* [WinRM - p5985 and 5986 (HTTPS).md](https://github.com/sedici-gith/eJPT/blob/main/Notes/WinRM%20-%20p5985%20and%205986%20(HTTPS).md)
 
 
 ## eJPT - CTF Notes
