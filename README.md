@@ -19,7 +19,9 @@
 * [MSSQL - p1433](https://github.com/sedici-gith/eJPT/blob/main/Notes/MSSQL%20-%20p1433.md)
 * [RPD - p3389](https://github.com/sedici-gith/eJPT/blob/main/Notes/RPD%20-%20p3389.md)
 * [WinRM - p5985 and 5986 (HTTPS).md](https://github.com/sedici-gith/eJPT/blob/main/Notes/WinRM%20-%20p5985%20and%205986%20(HTTPS).md)
+* [SNMP - p161,162](https://github.com/sedici-gith/eJPT/blob/main/Notes/SNMP%20-%20p161%2C162.md)
 * [MSFVenom](https://github.com/sedici-gith/eJPT/blob/main/Notes/MSFVenom.md)
+* [Automate Metasploit with resource script](https://github.com/sedici-gith/eJPT/blob/main/Notes/Automate%20Metasploit%20with%20resource%20script.md)
 
 
 ## eJPT - CTF Notes
