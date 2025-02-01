@@ -1,5 +1,5 @@
 # eJPT
-### Exam notes (in progress) and CTF notes
+### Exam notes and CTF notes
 ![eJPT_Certificate](https://api.accredible.com/v1/frontend/credential_website_embed_image/certificate/107626682)
 
 ## eJPT - Exam Notes Index
