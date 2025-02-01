@@ -7,7 +7,7 @@
 ### Passive Reconnaissance
 * [Passive Reconnaissance](https://github.com/sedici-gith/eJPT/blob/main/Notes/Passive%20Reconnaissance.md)
 
-### Active Information Gathering
+### Active Information Gathering and Exploitation
 * [Active Information Gathering (DNS)](https://github.com/sedici-gith/eJPT/blob/main/Notes/Active%20Information%20Gathering%20(DNS).md)
 * [Host Discovery (Nmap basics)](https://github.com/sedici-gith/eJPT/blob/main/Notes/Host%20Discovery%20(Nmap%20basics).md)
 * [SMB (Samba) - p445 and NetBios - p137,138,139](https://github.com/sedici-gith/eJPT/blob/main/Notes/SMB%20(Samba)%20-%20p445%20and%20NetBios%20-%20p137%2C138%2C139.md)
@@ -20,9 +20,14 @@
 * [RPD - p3389](https://github.com/sedici-gith/eJPT/blob/main/Notes/RPD%20-%20p3389.md)
 * [WinRM - p5985 and 5986 (HTTPS).md](https://github.com/sedici-gith/eJPT/blob/main/Notes/WinRM%20-%20p5985%20and%205986%20(HTTPS).md)
 * [SNMP - p161,162](https://github.com/sedici-gith/eJPT/blob/main/Notes/SNMP%20-%20p161%2C162.md)
+
+### Post Exploitation and Persistence
 * [MSFVenom](https://github.com/sedici-gith/eJPT/blob/main/Notes/MSFVenom.md)
 * [Automate Metasploit with resource script](https://github.com/sedici-gith/eJPT/blob/main/Notes/Automate%20Metasploit%20with%20resource%20script.md)
 * [Windows Post Exploitation](https://github.com/sedici-gith/eJPT/blob/main/Notes/Windows%20Post%20Exploitation.md)
+* [Linux Post Exploitation](https://github.com/sedici-gith/eJPT/blob/main/Notes/Linux%20Post%20Exploitation.md)
+* [Web Penetration Test (Basic)](https://github.com/sedici-gith/eJPT/blob/main/Notes/Web%20Penetration%20Test%20(Basic).md)
+* [Pivoting and lateral movement](https://github.com/sedici-gith/eJPT/blob/main/Notes/Pivoting%20and%20lateral%20movement.md)
 
 
 ## eJPT - CTF Notes
