@@ -22,6 +22,7 @@
 * [SNMP - p161,162](https://github.com/sedici-gith/eJPT/blob/main/Notes/SNMP%20-%20p161%2C162.md)
 * [MSFVenom](https://github.com/sedici-gith/eJPT/blob/main/Notes/MSFVenom.md)
 * [Automate Metasploit with resource script](https://github.com/sedici-gith/eJPT/blob/main/Notes/Automate%20Metasploit%20with%20resource%20script.md)
+* [Windows Post Exploitation](https://github.com/sedici-gith/eJPT/blob/main/Notes/Windows%20Post%20Exploitation.md)
 
 
 ## eJPT - CTF Notes
